@@ -1,2 +1,7 @@
-# 
-Exploratory Data Analysis - Course Project 2
+# Exploratory Data Analysis - Course Project 2
+## Intro
+
+## Step-by-step
+
+
+## Hints
