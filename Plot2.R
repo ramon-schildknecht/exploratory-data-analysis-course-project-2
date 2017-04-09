@@ -18,13 +18,13 @@ nei <- readRDS("summarySCC_PM25.rds")
 scc <- readRDS("Source_Classification_Code.rds")
 
 ##Generate base plot
-plot.data <- nei %>% group_by(year) %>% summarize(sum(Emissions))
+plot.data <- nei %>% filter(fips == "24510") %>% group_by(year) %>% summarize(sum(Emissions))
 names(plot.data) <- c("year", "total.emissions")
 opt <- options("scipen" = 20)
 with(plot.data, plot(year, total.emissions))
 lines(plot.data)
-title(main = "total PM2.5 from all sources")
+title(main = "total PM2.5 from Baltimore City, Maryland")
 
 ## Saving to png file
-dev.copy(png, file="plot1.png", height=480, width=480)
+dev.copy(png, file="plot2.png", height=480, width=480)
 dev.off()
